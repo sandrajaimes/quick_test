@@ -13,6 +13,8 @@ router.post('/login',controllerLogin.login);
 
 router.get('/test-cases',verifyToken.verifyToken,controllerTestCase.findAll);
 router.get('/test-cases/:id',verifyToken.verifyToken,controllerTestCase.oneTestCase);
-
+router.post('/test-cases',verifyToken.verifyToken,controllerTestCase.addTestCases);
+router.put('/test-cases/:id',verifyToken.verifyToken,controllerTestCase.updateTestCase);
+router.delete('/test-cases/:id',verifyToken.verifyToken,controllerTestCase.deleteTestCase);
 
 module.exports=router;
