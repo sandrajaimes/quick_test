@@ -1,11 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const jwt = require('jsonwebtoken');
-const config = require('./config/config');
 const router = require('./src/routers/index');
 const app = express();
 
-app.set('llave',config.llave);
+app.set('llave',"pormastesting2020");
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(router);
